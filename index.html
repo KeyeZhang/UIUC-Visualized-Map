@@ -1,0 +1,66 @@
+{% extends "static/templates/projectBase.html" %}
+{% block projectContent %}
+
+
+    
+   
+ <link href="./web/style.css" rel="stylesheet">
+     
+
+<h2>UIUCvisMap</h2>
+
+
+
+<body>
+    
+    <div class="gened_selection">
+        <li> <h5 style = "display : inline">Size of circles: </h5> Total number of students in the department</li>
+            <li> <h5 style = "display : inline">Color of circles: </h5> Different colleges</li>
+            <li> <h5 style = "display : inline">Transparency: </h5> Female%</li>
+            <li> <h5 style = "display : inline">Click on the circles! :</h5> Go to departments websites</li>
+            
+
+<br>
+<div class="row" style="text-align: center;">
+    <div class="col-md-6" style="margin-bottom: 15px;">
+        <div id="legend"><svg width="250" height="45" style="width: 200px; height: 45px;"><g><circle cx="20" cy="14" r="6" fill="hsla(199, 77%, 41%, 0.77)"></circle><circle cx="60" cy="14" r="8" fill="hsla(199, 77%, 41%, 0.77)"></circle><circle cx="100" cy="14" r="10" fill="hsla(199, 77%, 41%, 0.77)"></circle><circle cx="140" cy="14" r="12" fill="hsla(199, 77%, 41%, 0.77)"></circle><circle cx="180" cy="14" r="14" fill="hsla(199, 77%, 41%, 0.77)"></circle></g></svg></div>
+        The larger the radius of the circle, the higher the scores of the team.
+    </div>
+    
+    <div class="col-md-6" style="margin-bottom: 15px;">
+        <div id="legend2" style="margin-top: 7px; margin-bottom: 3px;"><svg width="300" height="35" style="width: 300px; height: 35px;"><g><circle cx="70" cy="10" r="10" fill="rgba(24, 134, 185, 0.77)"></circle><text x="70" y="35" text-anchor="middle"> 10%</text><circle cx="110" cy="10" r="10" fill="rgba(61, 124, 197, 0.77)"></circle><circle cx="150" cy="10" r="10" fill="rgba(110, 109, 197, 0.77)"></circle><circle cx="190" cy="10" r="10" fill="rgba(155, 86, 181, 0.77)"></circle><circle cx="230" cy="10" r="10" fill="rgba(191, 53, 149, 0.77)"></circle><text x="230" y="35" text-anchor="middle"> 80%</text></g></svg></div>
+        The higher the win rate of the team,the more red element is added to the rgba color.
+    </div>
+</div>
+
+<input name="year" type="radio" class="myCheckbox-A1" value="2005"> 2005
+    <input name="year" type="radio" class="myCheckbox-A2" value="2015"> 2015
+        <br>
+        <input type="checkbox" class="myCheckbox-B1" value = "Engineering"> College of Engineering
+            
+            
+            <input type="checkbox" class="myCheckbox-B2" value = "Art"> College of Art
+                
+                <input type="checkbox" class="myCheckbox-B3" value = "Liberal Art"> College of Liberal Art
+                    
+                    
+                    <input type="checkbox" class="myCheckbox-B4" value = "Agriculture"> College of Agriculture
+                        
+                        <input type="checkbox" class="myCheckbox-B5" value = "Business"> College of Business
+                            <br>
+                            
+                
+                
+    </div>
+    
+<div class = "jumbotron">
+<div id="chart"></div>
+
+
+     
+    
+<script src="web/vis.js"></script>
+</div>
+</body>
+
+{% endblock %}
